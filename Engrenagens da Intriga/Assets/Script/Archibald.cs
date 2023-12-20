@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Archibald : MonoBehaviour
 {
+
     #region variaves
     //personagem
     [Header("personagem\n" +
@@ -51,6 +52,7 @@ public class Archibald : MonoBehaviour
     private Camera mainCamera;
     private Quaternion rotacao;
     private bool joy;
+    private GameObject atteck;
     //just for debugging
     [Header("colisãos")]
     [SerializeField] Collider2D colliderSeeing = null;
@@ -104,6 +106,7 @@ public class Archibald : MonoBehaviour
 
     #region FSM
     //controle de state
+    
     void homdleenemyFSM(float deltaTIme)
     {
         //tempo de estado
@@ -231,6 +234,7 @@ public class Archibald : MonoBehaviour
         }
         return State;
     }
+
     //sair do estado atual
     void OnStateExit(State State)
     {
@@ -238,6 +242,11 @@ public class Archibald : MonoBehaviour
         {
             case State.atteck:
                 atteckmove = 1;
+                if (personagem == 1 || personagem == 2)
+                {
+                    //Destroy(atteck);
+                    attek.SetActive(false);
+                }
                 break;
             case State.desh:
                 deshrelod = reloddesh;
@@ -375,10 +384,17 @@ public class Archibald : MonoBehaviour
             return false;
         }
     }
-
+    
     void atteckfuncion()
     {
-        Instantiate(attek, posisionatteck.position, transform.rotation);
+        if (personagem == 3 || personagem == 0) {
+            Instantiate(attek, posisionatteck.position, transform.rotation);
+        }
+        else
+        {
+            //atteck = Instantiate(attek, posisionatteck.position, transform.rotation,transform.parent);
+            attek.SetActive(true);
+        }
     }
 
     //rotação
