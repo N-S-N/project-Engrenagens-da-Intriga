@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb0273b8312ca8c40a938ec402157735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 3
   bunecoSelecinado: 0
   imagem: []
   nomeBuneco:
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb0273b8312ca8c40a938ec402157735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 4
   bunecoSelecinado: 0
   imagem: []
   nomeBuneco:
@@ -1636,6 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb0273b8312ca8c40a938ec402157735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 1
   bunecoSelecinado: 0
   imagem: []
   nomeBuneco:
@@ -2421,6 +2424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb0273b8312ca8c40a938ec402157735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 2
   bunecoSelecinado: 0
   imagem: []
   nomeBuneco:

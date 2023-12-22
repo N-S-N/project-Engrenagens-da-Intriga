@@ -4,6 +4,8 @@ using TMPro;
 
 public class selecao : MonoBehaviour
 {
+    [Header("player\n do 1 ao 4")]
+    [SerializeField] int player;
     [Header("0 = nenhum buneco\n 1 = Archibald \n 2 = Victoria  \n 3 = Capitão \n 4 = Lady ")]
     public int bunecoSelecinado = 0;  
     [Header("imagem & texto")]
@@ -20,10 +22,6 @@ public class selecao : MonoBehaviour
 
     private int boneco = 1;
 
-    private void Awake()
-    {
-
-    }
     private void Update()
     {
         if (bunecoSelecinado != 0)
@@ -33,8 +31,9 @@ public class selecao : MonoBehaviour
         }
         //nome e imagem
         neme.text = nomeBuneco[boneco-1];
-        imagemselection.sprite = imagem[boneco-1];
-
+        
+        imagemselection.sprite = imagem[boneco - 1];
+        
         //ativar e desativar a selecao
         int a = seler.Length;
         int b = 0;
@@ -76,6 +75,7 @@ public class selecao : MonoBehaviour
                 b++;
                 if (a == b) {
                     bunecoSelecinado = boneco;
+                    PlayerPrefs.SetInt("Player"+player, bunecoSelecinado);
                     buton.interactable = false;
                     cima.interactable = false;
                     baixo.interactable = false;

@@ -34,7 +34,9 @@ public class Archibald : MonoBehaviour
     [SerializeField] AudioClip[] audios;
     [Header("relod")]
     [SerializeField] float reloddesh;
-
+    [Header("STATE")]
+    public int Maxlife;
+    public int Life;
     //public
     public bool resoveu;
 
