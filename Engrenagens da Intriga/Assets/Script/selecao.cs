@@ -76,6 +76,7 @@ public class selecao : MonoBehaviour
                 if (a == b) {
                     bunecoSelecinado = boneco;
                     PlayerPrefs.SetInt("Player"+player, bunecoSelecinado);
+                    PlayerPrefs.SetInt("selectionmenu", PlayerPrefs.GetInt("selectionmenu") +1);
                     buton.interactable = false;
                     cima.interactable = false;
                     baixo.interactable = false;

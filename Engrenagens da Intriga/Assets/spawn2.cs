@@ -1,7 +1,7 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
-public class spawn : MonoBehaviour
+public class spawn2 : MonoBehaviour
 {
     [Header("player")]
     [SerializeField] int player;
@@ -14,6 +14,7 @@ public class spawn : MonoBehaviour
     //[Header("ui")]
     //[SerializeField] GameObject[] UiLife;
     //[SerializeField] GameObject[] UiImage;
+    Archibald archibald;
 
     [Header("public")]
     public GameObject playerObj;
@@ -22,14 +23,17 @@ public class spawn : MonoBehaviour
     [SerializeField] Image[] lifeSprite;
     [SerializeField] Image[] fotoSprite;
 
+    [Header("camera")]
+    [SerializeField] Camera cam;
+
     private int perso;
 
     private void Awake()
     {
         //spanando o buneco
-        perso = PlayerPrefs.GetInt("Player" + player)-1;
-        playerObj = Instantiate(prefeb[perso],transform.position,transform.rotation);
-        
+        perso = PlayerPrefs.GetInt("Player" + player) - 1;
+        playerObj = Instantiate(prefeb[perso], transform.position, transform.rotation);
+
         //playerObj = Instantiate(prefeb[perso]);
         //pegando componete
 
@@ -37,7 +41,15 @@ public class spawn : MonoBehaviour
         // fotoSprite = UiImage[perso].GetComponent<Image>();
 
         //colocando imagem
-        lifeSprite[perso].sprite = imagemsUi[perso];
-        fotoSprite[perso].sprite = artUi[perso];     
+        for (int i = 0; i < lifeSprite.Length; i++)
+        {
+            lifeSprite[i].sprite = imagemsUi[perso];
+            fotoSprite[i].sprite = artUi[perso];
+        }
+    }
+    private void Start()
+    {
+        archibald = playerObj.GetComponent<Archibald>();
+        archibald.mainCamera = cam;
     }
 }

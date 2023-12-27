@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152765038950469828}
-  - component: {fileID: 5095489302913630184}
+  - component: {fileID: -231996863994186984}
   m_Layer: 0
   m_Name: spawn
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5095489302913630184
+--- !u!114 &-231996863994186984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,17 +41,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2605128201647912823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295853da22cc31a45abfd5eeb2c59984, type: 3}
+  m_Script: {fileID: 11500000, guid: e148172b0c86bca4da6f5c685e207fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 1
+  player: 0
   prefeb:
   - {fileID: 5065046130774709536, guid: e22172e46033d164383f83576168d831, type: 3}
   - {fileID: 4186187076218372476, guid: f5732746c21be164081d38118ca917cd, type: 3}
   - {fileID: 5002199325239329003, guid: feac87f3765c6cc4191db82103ab2fa3, type: 3}
   - {fileID: 6726841419073146219, guid: b4f54e71fd919074d89ed20a613142d2, type: 3}
-  imagemsUi: []
-  artUi: []
-  UiLife: []
-  UiImage: []
+  imagemsUi:
+  - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
+  - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}
+  - {fileID: 21300000, guid: d12478d2e7544c14aa0454dc86a0fbc4, type: 3}
+  - {fileID: 21300000, guid: b6a47d08cec5da0469b65966c02f7dcb, type: 3}
+  artUi:
+  - {fileID: -1960640238, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
+  - {fileID: -1122630083, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
+  - {fileID: -1135860931, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
+  - {fileID: -196140055, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
   playerObj: {fileID: 0}
+  lifeSprite: []
+  fotoSprite: []

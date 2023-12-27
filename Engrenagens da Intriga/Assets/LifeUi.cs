@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class LifeUi : MonoBehaviour
 {
-    [SerializeField] spawn sapawn;
+    [SerializeField] spawn2 sapawn;
     private Archibald player;
-    Image imagem;
+    [SerializeField] Image imagem;
     void Start()
     {
         player = sapawn.playerObj.GetComponent<Archibald>();
-        imagem = player.GetComponent<Image>();
+        //imagem = player.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        imagem.fillAmount = (float)player.Maxlife / player.Life;
+        imagem.fillAmount = player.Maxlife / player.Life;
     }
 }

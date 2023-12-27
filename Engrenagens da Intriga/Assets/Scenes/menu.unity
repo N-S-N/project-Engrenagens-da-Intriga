@@ -156,7 +156,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 3
   bunecoSelecinado: 0
-  imagem: []
+  imagem:
+  - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
+  - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}
+  - {fileID: 21300000, guid: d12478d2e7544c14aa0454dc86a0fbc4, type: 3}
+  - {fileID: 21300000, guid: b6a47d08cec5da0469b65966c02f7dcb, type: 3}
   nomeBuneco:
   - Professor Archibald Cogsworth
   - Victoria Ironheart
@@ -288,7 +292,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 4
   bunecoSelecinado: 0
-  imagem: []
+  imagem:
+  - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
+  - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}
+  - {fileID: 21300000, guid: d12478d2e7544c14aa0454dc86a0fbc4, type: 3}
+  - {fileID: 21300000, guid: b6a47d08cec5da0469b65966c02f7dcb, type: 3}
   nomeBuneco:
   - Professor Archibald Cogsworth
   - Victoria Ironheart
@@ -1640,7 +1648,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 1
   bunecoSelecinado: 0
-  imagem: []
+  imagem:
+  - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
+  - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}
+  - {fileID: 21300000, guid: d12478d2e7544c14aa0454dc86a0fbc4, type: 3}
+  - {fileID: 21300000, guid: b6a47d08cec5da0469b65966c02f7dcb, type: 3}
   nomeBuneco:
   - Professor Archibald Cogsworth
   - Victoria Ironheart
@@ -2426,7 +2438,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 2
   bunecoSelecinado: 0
-  imagem: []
+  imagem:
+  - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
+  - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}
+  - {fileID: 21300000, guid: d12478d2e7544c14aa0454dc86a0fbc4, type: 3}
+  - {fileID: 21300000, guid: b6a47d08cec5da0469b65966c02f7dcb, type: 3}
   nomeBuneco:
   - Professor Archibald Cogsworth
   - Victoria Ironheart
@@ -3722,6 +3738,7 @@ GameObject:
   - component: {fileID: 1728833847}
   - component: {fileID: 1728833846}
   - component: {fileID: 1728833845}
+  - component: {fileID: 1728833849}
   m_Layer: 5
   m_Name: selecao
   m_TagString: Untagged
@@ -3815,6 +3832,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1728833849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728833844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114e8d79ff7e1164490ed5825a769234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1733381013
 GameObject:
   m_ObjectHideFlags: 0

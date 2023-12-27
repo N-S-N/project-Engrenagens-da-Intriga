@@ -35,8 +35,10 @@ public class Archibald : MonoBehaviour
     [Header("relod")]
     [SerializeField] float reloddesh;
     [Header("STATE")]
-    public int Maxlife;
-    public int Life;
+    public float Maxlife;
+    public float Life;
+    [Header("Camera")]
+    public Camera mainCamera;
     //public
     public bool resoveu;
 
@@ -50,8 +52,7 @@ public class Archibald : MonoBehaviour
     private bool demegecolider;
     private int atteckmove = 1;
     private float deshrelod = 0;
-    private Vector2 derictionmove;
-    private Camera mainCamera;
+    private Vector2 derictionmove; 
     private Quaternion rotacao;
     private bool joy;
     private GameObject atteck;
@@ -81,7 +82,8 @@ public class Archibald : MonoBehaviour
     #region updete e start
     private void Awake()
     {
-        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        mainCamera = GetComponent<Camera>();
+        //mainCamera = GetComponentInChildren<Camera>();
     }
     void Start()
     {
