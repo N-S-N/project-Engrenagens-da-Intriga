@@ -390,7 +390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sapawn: {fileID: 0}
-  imagem: {fileID: 0}
 --- !u!1 &3665070431864487704
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sapawn: {fileID: 0}
-  imagem: {fileID: 0}
 --- !u!1 &4592602132382176937
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sapawn: {fileID: 0}
-  imagem: {fileID: 0}
 --- !u!1 &6150324583310965025
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,7 +950,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sapawn: {fileID: 0}
-  imagem: {fileID: 0}
 --- !u!1 &7621473382842397876
 GameObject:
   m_ObjectHideFlags: 0

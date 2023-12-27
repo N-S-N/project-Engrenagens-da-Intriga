@@ -5,11 +5,11 @@ public class LifeUi : MonoBehaviour
 {
     [SerializeField] spawn2 sapawn;
     private Archibald player;
-    [SerializeField] Image imagem;
+    Image imagem;
     void Start()
     {
         player = sapawn.playerObj.GetComponent<Archibald>();
-        //imagem = player.GetComponent<Image>();
+        imagem = GetComponent<Image>();
     }
 
     // Update is called once per frame

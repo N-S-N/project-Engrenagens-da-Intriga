@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class comaredisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] spawn2 spawn;
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector3(spawn.playerObj.transform.position.x, spawn.playerObj.transform.position.y, -10);
     }
 }
