@@ -1,7 +1,9 @@
+using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Archibald : MonoBehaviour
+public class Archibald : NetworkBehaviour
 {
 
     #region variaves
@@ -48,7 +50,7 @@ public class Archibald : MonoBehaviour
     private Collider2D coll2D;
     private SpriteRenderer imagerender;
     private Animator InimeAnimator;
-    private PlayerInput playerInput;
+    public PlayerInput playerInput;
     private bool demegecolider;
     private int atteckmove = 1;
     private float deshrelod = 0;
@@ -87,18 +89,24 @@ public class Archibald : MonoBehaviour
     }
     void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
         audiosource = GetComponent<AudioSource>();
         enemyState = State.Iddle;
         rb2D = GetComponent<Rigidbody2D>();
         coll2D = GetComponent<Collider2D>();
         imagerender = GetComponent<SpriteRenderer>();
         InimeAnimator = GetComponent<Animator>();
+        if (IsOwner)
+        {
+            playerInput.enabled = true;
+
+        }
         resoveu = false;
     }
 
     void Update()
     {
+        if (!IsOwner) return;
+
         float delta = Time.deltaTime;
         homdleenemyFSM(delta);
         //InimeAnimator.SetInteger("State", (int)enemyState);
