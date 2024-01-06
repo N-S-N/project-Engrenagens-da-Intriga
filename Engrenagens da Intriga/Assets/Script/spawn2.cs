@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class spawn2 : MonoBehaviour
@@ -20,18 +21,22 @@ public class spawn2 : MonoBehaviour
     public GameObject playerObj;
 
     [Header("imagems")]
-    [SerializeField] Image[] lifeSprite;
-    [SerializeField] Image[] fotoSprite;
+    [SerializeField] Image lifeSprite;
+    [SerializeField] Image fotoSprite;
 
     [Header("camera")]
     [SerializeField] Camera cam;
+
+    PlayerInputManager playerInputManager;
 
     private int perso;
 
     private void Awake()
     {
         //spanando o buneco
-        perso = PlayerPrefs.GetInt("Player" + player) - 1;
+        playerInputManager = FindAnyObjectByType<PlayerInputManager>();
+        int a = playerInputManager.playerCount;
+        perso = PlayerPrefs.GetInt("Player" + a) - 1;
         playerObj = Instantiate(prefeb[perso], transform.position, transform.rotation);
 
         //playerObj = Instantiate(prefeb[perso]);
@@ -41,11 +46,10 @@ public class spawn2 : MonoBehaviour
         // fotoSprite = UiImage[perso].GetComponent<Image>();
 
         //colocando imagem
-        for (int i = 0; i < lifeSprite.Length; i++)
-        {
-            lifeSprite[i].sprite = imagemsUi[perso];
-            fotoSprite[i].sprite = artUi[perso];
-        }
+       
+        lifeSprite.sprite = imagemsUi[perso];
+        fotoSprite.sprite = artUi[perso];
+        
     }
     private void Start()
     {

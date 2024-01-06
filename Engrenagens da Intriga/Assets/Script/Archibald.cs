@@ -13,36 +13,43 @@ public class Archibald : MonoBehaviour
         "3 = Lady Seraphina Ravenscroft")]
     [SerializeField] int personagem;
     //variaves
-    [Header("sistema de movimentação")]
-    [SerializeField] float speedWalk;
+    //[Header("sistema de movimentação")]
+    //[SerializeField] float speedWalk;
     [Header("tempo")]
-    [SerializeField] float timecreat;
-    [SerializeField] float timeatteck;
+    [SerializeField] float[] timecreat;
+    [SerializeField] float[] timeatteck;
     [SerializeField] float timedamege;
-    [SerializeField] float timedash;
+    //[SerializeField] float timedash;
     [Header("campo de visão")]
-    [SerializeField] float Rangecret;
-    [Header("Layer")]
-    [SerializeField] LayerMask groundMask;
-    [SerializeField] LayerMask playerMask;
+    [SerializeField] float[] Rangecret;
+    //[Header("Layer")]
+    //[SerializeField] LayerMask groundMask;
+    //[SerializeField] LayerMask playerMask;
     [Header("tag")]
-    [SerializeField] string taginteracao;
+    [SerializeField] string[] taginteracao;
     [Header("objeto")]
-    [SerializeField] GameObject attek;
+    [SerializeField] GameObject[] attek;
     [SerializeField] Transform posisionatteck;
     [Header("audio")]
     [SerializeField] AudioClip[] audios;
-    [Header("relod")]
-    [SerializeField] float reloddesh;
+    //[Header("relod")]
+    //[SerializeField] float reloddesh;
     [Header("STATE")]
-    public float Maxlife;
-    public float Life;
+    public float[] Maxlife;
+    public float[] Life;
     [Header("Camera")]
     public Camera mainCamera;
     //public
     public bool resoveu;
+    [Header("Image")]
+    [SerializeField] Sprite[] sprites;
+    public Sprite[] foto;
+    public Sprite[] blackfoto;
 
+    
     //privada
+    Uimaneger Uimaneger;
+    private movePlayer moveplayer;
     private AudioSource audiosource;
     private Rigidbody2D rb2D;
     private Collider2D coll2D;
@@ -50,12 +57,13 @@ public class Archibald : MonoBehaviour
     private Animator InimeAnimator;
     private PlayerInput playerInput;
     private bool demegecolider;
-    private int atteckmove = 1;
-    private float deshrelod = 0;
     private Vector2 derictionmove; 
     private Quaternion rotacao;
     private bool joy;
     private GameObject atteck;
+
+    Transform playerPosision;
+
     //just for debugging
     [Header("colisãos")]
     [SerializeField] Collider2D colliderSeeing = null;
@@ -82,12 +90,13 @@ public class Archibald : MonoBehaviour
     #region updete e start
     private void Awake()
     {
-        mainCamera = GetComponent<Camera>();
+        //mainCamera = GetComponent<Camera>();
         //mainCamera = GetComponentInChildren<Camera>();
     }
     void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
+        moveplayer = GetComponentInParent<movePlayer>(); 
+        playerInput = GetComponentInParent<PlayerInput>();
         audiosource = GetComponent<AudioSource>();
         enemyState = State.Iddle;
         rb2D = GetComponent<Rigidbody2D>();
@@ -95,6 +104,15 @@ public class Archibald : MonoBehaviour
         imagerender = GetComponent<SpriteRenderer>();
         InimeAnimator = GetComponent<Animator>();
         resoveu = false;
+        Uimaneger = FindAnyObjectByType<Uimaneger>();
+        personagem = moveplayer.personagem;
+        playerPosision = GetComponentInParent<Transform>();
+
+        //parte de imagems
+
+        //imagerender.sprite = sprites[personagem];
+        Uimaneger.foto[moveplayer.PlayerInfo].sprite = foto[personagem];
+        Uimaneger.blackfoto[moveplayer.PlayerInfo].sprite = blackfoto[personagem];
     }
 
     void Update()
@@ -102,8 +120,11 @@ public class Archibald : MonoBehaviour
         float delta = Time.deltaTime;
         homdleenemyFSM(delta);
         //InimeAnimator.SetInteger("State", (int)enemyState);
-        deshrelod -= delta;
         rotecion();
+
+        Uimaneger.maxlife[moveplayer.PlayerInfo] = Maxlife[personagem];
+        Uimaneger.life[moveplayer.PlayerInfo] = Life[personagem];
+        transform.position = playerPosision.position;
     }
 
     #endregion
@@ -143,7 +164,7 @@ public class Archibald : MonoBehaviour
         {
 
             case State.Iddle:
-                if (OnMove())
+                if (moveplayer.isMove)
                 {
                     return State.move;
                 }
@@ -161,14 +182,14 @@ public class Archibald : MonoBehaviour
                 {
                     return State.damege;
                 }
-                if (personagem == 2 && deshrelod <= 0 && deshbotom())
+                if (moveplayer.isDesh)
                 {
                     return State.desh;
                 }
                 break;
 
             case State.move: 
-                if (!OnMove())
+                if (!moveplayer.isMove)
                 {
                     return State.Iddle;
                 }
@@ -187,14 +208,14 @@ public class Archibald : MonoBehaviour
                 {
                     return State.damege;
                 }
-                if (personagem == 2 && deshrelod <= 0 && deshbotom())
+                if (moveplayer.isDesh)
                 {
                     return State.desh;
                 }
                 break;
 
             case State.interaction:
-                if (time >= timecreat && personagem == 1 || personagem == 3)
+                if (time >= timecreat[personagem] && personagem == 1 || personagem == 3)
                 {
                     return State.Iddle;
                 }
@@ -209,7 +230,7 @@ public class Archibald : MonoBehaviour
                 break;
 
             case State.atteck:
-                if (time >= timeatteck)
+                if (time >= timeatteck[personagem])
                 {
                     return State.Iddle;
                 }
@@ -227,7 +248,7 @@ public class Archibald : MonoBehaviour
                 break;
 
             case State.desh:
-                if (time >= timedash)
+                if (!moveplayer.isDesh)
                 {
                     return State.Iddle;
                 }
@@ -245,15 +266,12 @@ public class Archibald : MonoBehaviour
         switch (State)
         {
             case State.atteck:
-                atteckmove = 1;
+                moveplayer.atteckmove = 1;
                 if (personagem == 1 || personagem == 2)
                 {
                     //Destroy(atteck);
-                    attek.SetActive(false);
+                    attek[personagem].SetActive(false);
                 }
-                break;
-            case State.desh:
-                deshrelod = reloddesh;
                 break;
             case State.interaction:
                 resoveu = false;
@@ -269,7 +287,7 @@ public class Archibald : MonoBehaviour
         {
             case State.atteck:
                 atteckfuncion();
-                atteckmove = 2;
+                moveplayer.atteckmove = 2;
                 break;
             default:
                 break;
@@ -280,20 +298,11 @@ public class Archibald : MonoBehaviour
     {
         switch (State)
         {
-            case State.move:
-                mover();
-                break;
-            case State.atteck:
-                mover();
-                break;
-            case State.desh:
-                desh();
-                break;
             case State.interaction:
-                stop();
+                moveplayer.stop();
                 break;
             case State.Iddle:
-                stop();
+                moveplayer.stop();
                 break;
             default:
                 break;
@@ -305,20 +314,6 @@ public class Archibald : MonoBehaviour
     //public void OnMove(InputAction.CallbackContext context)
     //{
     //}
-
-
-    //butao de mover
-    bool OnMove()
-    {
-        if (playerInput.actions["Move"].inProgress)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 
     //butao de interagir
     bool interactionbotom()
@@ -337,19 +332,6 @@ public class Archibald : MonoBehaviour
     bool atteckbotom()
     {
         if (playerInput.actions["atteck"].inProgress)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    //butom desh
-    bool deshbotom()
-    {
-        if (playerInput.actions["desh"].triggered)
         {
             return true;
         }
@@ -378,8 +360,8 @@ public class Archibald : MonoBehaviour
 
     private bool interacaoobj()
     {
-        RaycastHit2D m_HitDetect = Physics2D.CircleCast(transform.position, Rangecret, Vector2.zero);
-        if (m_HitDetect.collider.gameObject.CompareTag(taginteracao))
+        RaycastHit2D m_HitDetect = Physics2D.CircleCast(transform.position, Rangecret[personagem], Vector2.zero);
+        if (m_HitDetect.collider.gameObject.CompareTag(taginteracao[personagem]))
         {
             return true;
         }
@@ -392,12 +374,12 @@ public class Archibald : MonoBehaviour
     void atteckfuncion()
     {
         if (personagem == 3 || personagem == 0) {
-            Instantiate(attek, posisionatteck.position, transform.rotation);
+            Instantiate(attek[personagem], posisionatteck.position, transform.rotation);
         }
         else
         {
             //atteck = Instantiate(attek, posisionatteck.position, transform.rotation,transform.parent);
-            attek.SetActive(true);
+            attek[personagem].SetActive(true);
         }
     }
 
@@ -416,8 +398,9 @@ public class Archibald : MonoBehaviour
         {
             //mause
             Vector2 position = new Vector2(transform.position.x, transform.position.y);
-            Vector2 b = mainCamera.ScreenToWorldPoint(playerInput.actions["rotecion"].ReadValue<Vector2>());
-            Vector2 a = b - position;
+            Vector2 b = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 a = (b - position).normalized;
+           
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(a.y, a.x) * Mathf.Rad2Deg));
         }
         else if (playerInput.actions["rotecion"].ReadValue<Vector2>().x != 0 && playerInput.actions["rotecion"].ReadValue<Vector2>().y != 0)
@@ -431,30 +414,6 @@ public class Archibald : MonoBehaviour
             transform.rotation = rotacao;
         }
     }
-
-    #endregion
-
-    #region movimentacao
-
-    private void mover()
-    {
-        rb2D.velocity = (playerInput.actions["Move"].ReadValue<Vector2>() * speedWalk) / atteckmove;
-        if (rb2D.velocity != new Vector2(0,0)) 
-        {
-            derictionmove = playerInput.actions["Move"].ReadValue<Vector2>();
-        }
-    }
-
-    private void desh()
-    {
-        rb2D.velocity = (derictionmove * speedWalk) * 2;
-    }
-
-    private void stop()
-    {
-        rb2D.velocity = Vector2.zero;
-    }
-    //rotação
 
     #endregion
 
