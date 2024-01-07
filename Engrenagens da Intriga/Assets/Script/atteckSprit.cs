@@ -35,7 +35,7 @@ public class atteckSprit : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("enemy"))
             {
-                collision.gameObject.GetComponent<enemyControl>().Life -= damege;
+                collision.gameObject.GetComponent<enemyControle>().Life -= damege;
                 //enemyControl.Life -= damege; 
             }
             Destroy(gameObject);

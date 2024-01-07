@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8147238186411928870}
   m_Layer: 3
   m_Name: Player Prefarb
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

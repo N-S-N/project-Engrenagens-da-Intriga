@@ -64,10 +64,6 @@ public class Archibald : MonoBehaviour
 
     Transform playerPosision;
 
-    //just for debugging
-    [Header("colisãos")]
-    [SerializeField] Collider2D colliderSeeing = null;
-
     #endregion
 
     #region state
@@ -344,15 +340,16 @@ public class Archibald : MonoBehaviour
     //colicão entrada
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("enemyProjects"))
         {
             demegecolider = true;
+            Life[personagem] -= GetComponent<fireConfigEnemy>().demege;
         }
     }
     //colicão saida
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("enemyProjects"))
         {
             demegecolider = false;
         }
