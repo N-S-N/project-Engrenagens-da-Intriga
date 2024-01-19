@@ -437,7 +437,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.13333334, g: 0.1254902, b: 0.20392159, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -640,7 +640,6 @@ MonoBehaviour:
   - {fileID: -1122630083, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
   - {fileID: -1135860931, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
   - {fileID: -196140055, guid: 8063a60dfafe9814682975f1965feb93, type: 3}
-  colliderSeeing: {fileID: 0}
   enemyState: 0
 --- !u!50 &5617859932636748579
 Rigidbody2D:
