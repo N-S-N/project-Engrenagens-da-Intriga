@@ -92,6 +92,9 @@ MonoBehaviour:
   _relodDesh: 1
   PlayerInfo: 0
   TransformCam: {fileID: 7759752760175186888}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &4938393938552094929
 Rigidbody2D:
   serializedVersion: 4
@@ -605,6 +608,9 @@ MonoBehaviour:
   - 3.67
   - 4.68
   - 4.83
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1
   taginteracao:
   - sfds
   - fdby

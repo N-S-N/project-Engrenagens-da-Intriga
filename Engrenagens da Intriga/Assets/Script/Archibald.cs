@@ -1,5 +1,7 @@
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Archibald : MonoBehaviour
 {
@@ -22,8 +24,8 @@ public class Archibald : MonoBehaviour
     //[SerializeField] float timedash;
     [Header("campo de visão")]
     [SerializeField] float[] Rangecret;
-    //[Header("Layer")]
-    //[SerializeField] LayerMask groundMask;
+    [Header("Layer")]
+    [SerializeField] LayerMask groundMask;
     //[SerializeField] LayerMask playerMask;
     [Header("tag")]
     [SerializeField] string[] taginteracao;
@@ -45,7 +47,6 @@ public class Archibald : MonoBehaviour
     [SerializeField] Sprite[] sprites;
     public Sprite[] foto;
     public Sprite[] blackfoto;
-
     
     //privada
     Uimaneger Uimaneger;
@@ -113,6 +114,16 @@ public class Archibald : MonoBehaviour
 
     void Update()
     {
+        if (Life[personagem] <= 0) {
+            gameObject.layer = groundMask;
+            gameObject.tag = "wall";
+            moveplayer.gameObject.tag = "wall";
+            moveplayer.gameObject.layer = groundMask;
+            moveplayer.IsLife = false;
+            //Destroy(gameObject); 
+            return;
+        }
+        
         float delta = Time.deltaTime;
         homdleenemyFSM(delta);
         //InimeAnimator.SetInteger("State", (int)enemyState);

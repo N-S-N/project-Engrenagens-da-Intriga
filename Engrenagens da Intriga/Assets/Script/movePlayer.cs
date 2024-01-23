@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class movePlayer : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class movePlayer : MonoBehaviour
     private bool _reloddesh = true;
     private bool _isDesh = false;
     public int PlayerInfo;
+    public bool IsLife = true;
 
     [SerializeField] Transform TransformCam;
 
@@ -45,6 +47,7 @@ public class movePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!IsLife) return;
         TransformCam.position = new Vector3(transform.position.x, transform.position.y, -10);
         rb2D.velocity = (input.actions["Move"].ReadValue<Vector2>() * SppedWalk[personagem]) / atteckmove;
         if (rb2D.velocity != new Vector2(0, 0))
@@ -89,4 +92,8 @@ public class movePlayer : MonoBehaviour
         rb2D.velocity = Vector2.zero;
     }
 
+    public void dead()
+    {
+
+    }
 }
