@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06ad55a31f7c0f4c8c89dbdbffb8928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 500
+  force: 700
   demege: 1
   dir: {x: 0, y: 0}
 --- !u!58 &2216299733133124001

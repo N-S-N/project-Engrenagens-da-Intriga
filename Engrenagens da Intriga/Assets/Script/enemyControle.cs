@@ -210,7 +210,7 @@ public class enemyControle : MonoBehaviour
         if (!playerdetect) return;
         direction = (playerdetect.transform.position - transform.position ).normalized;
         RaycastHit2D m_HitDetect = Physics2D.Raycast(transform.position, direction, _rangervision, playerMask+ groundMask);
-        if (m_HitDetect  /*&& !m_HitDetect.collider.gameObject.CompareTag("wall")*/)
+        if (m_HitDetect && !m_HitDetect.collider.gameObject.CompareTag("wall"))
         {
             if (Physics2D.Raycast(transform.position, direction, _distanceAtteck, playerMask)) 
             {

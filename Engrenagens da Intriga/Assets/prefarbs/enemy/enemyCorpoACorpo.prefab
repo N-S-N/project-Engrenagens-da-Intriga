@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personagem: 0
-  speedWalk: 12
+  speedWalk: 8
   _timeAtteck: 0.5
   _rangervision: 10
   _distanceAtteck: 0.8
