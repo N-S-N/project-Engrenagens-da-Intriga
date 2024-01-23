@@ -82,10 +82,10 @@ MonoBehaviour:
   personagem: 0
   atteckmove: 1
   SppedWalk:
-  - 3
-  - 4
   - 6
-  - 4
+  - 8
+  - 12
+  - 8
   TimeDesh: 0.2
   isMove: 0
   isDesh: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5461311578619233661}
   m_Layer: 3
   m_Name: arma
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 8209314736053219971}
   m_Layer: 3
   m_Name: player obj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +566,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

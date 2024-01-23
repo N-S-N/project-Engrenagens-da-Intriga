@@ -15,6 +15,9 @@ public class LifeUi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        imagem.fillAmount = Uimaneger.maxlife[playerinfo] / Uimaneger.life[playerinfo];
+        imagem.fillAmount = Uimaneger.life[playerinfo] / Uimaneger.maxlife[playerinfo];
+        //Debug.Log("porcentagem " + Uimaneger.maxlife[playerinfo] / Uimaneger.life[playerinfo]);
+        //Debug.Log("vida max " + Uimaneger.maxlife[playerinfo]);
+        //Debug.Log("vida atual " + Uimaneger.life[playerinfo]);
     }
 }

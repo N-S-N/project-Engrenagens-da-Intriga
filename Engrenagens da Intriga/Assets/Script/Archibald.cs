@@ -337,13 +337,15 @@ public class Archibald : MonoBehaviour
         }
     }
 
+    fireConfigEnemy fireenemy;
     //colicão entrada
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("enemyProjects"))
         {
             demegecolider = true;
-            Life[personagem] -= GetComponent<fireConfigEnemy>().demege;
+            Life[personagem] -= collision.gameObject.GetComponent<fireConfigEnemy>().demege;
+
         }
     }
     //colicão saida

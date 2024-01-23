@@ -121,7 +121,7 @@ MonoBehaviour:
   _distanceAtteck: 5
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   playerMask:
     serializedVersion: 2
     m_Bits: 8

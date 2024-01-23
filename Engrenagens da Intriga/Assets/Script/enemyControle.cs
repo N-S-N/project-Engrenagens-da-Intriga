@@ -206,16 +206,16 @@ public class enemyControle : MonoBehaviour
     //visao focada
     void visionDirection()
     {
-        if (playerdetect) return;
-
-        direction = playerdetect.transform.position - transform.position.normalized;
-        RaycastHit2D m_HitDetect = Physics2D.Raycast(transform.position, direction, _rangervision, playerMask);
-
-        if (m_HitDetect)
+        //Debug.Log(playerdetect);
+        if (!playerdetect) return;
+        direction = (playerdetect.transform.position - transform.position ).normalized;
+        RaycastHit2D m_HitDetect = Physics2D.Raycast(transform.position, direction, _rangervision, playerMask+ groundMask);
+        if (m_HitDetect  /*&& !m_HitDetect.collider.gameObject.CompareTag("wall")*/)
         {
             if (Physics2D.Raycast(transform.position, direction, _distanceAtteck, playerMask)) 
             {
                 atteckva = true;
+                rb2D.velocity = Vector2.zero;
                 return;
             }
             Move();
@@ -223,6 +223,7 @@ public class enemyControle : MonoBehaviour
         else
         {
             playerdetect = null;
+            rb2D.velocity = Vector2.zero;
         }
     }
 
@@ -260,9 +261,10 @@ public class enemyControle : MonoBehaviour
         }
         else
         {
-         GameObject tiro = Instantiate(attek,transform.position,transform.rotation);
-         FireSetting(tiro);
-
+            GameObject tiro = Instantiate(attek,transform.position,transform.rotation);
+            fireConfigEnemy confug;
+            confug = tiro.GetComponent<fireConfigEnemy>();
+            confug.dir = direction;
         }
 
     }
@@ -275,12 +277,7 @@ public class enemyControle : MonoBehaviour
         }
     }
 
-    void FireSetting(GameObject fire)
-    {
-        GetComponent<fireConfigEnemy>().FireDisrary(direction);
 
-
-    }
     #endregion
 
 }
