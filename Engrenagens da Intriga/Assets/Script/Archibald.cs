@@ -327,7 +327,8 @@ public class Archibald : MonoBehaviour
     //butom de atacar
     bool atteckbotom()
     {
-        if (playerInput.actions["atteck"].inProgress)
+
+        if (playerInput.actions["atteck"].inProgress || Input.GetMouseButton(0))
         {
             return true;
         }
@@ -337,7 +338,6 @@ public class Archibald : MonoBehaviour
         }
     }
 
-    fireConfigEnemy fireenemy;
     //colicão entrada
     private void OnCollisionEnter2D(Collision2D collision)
     {
