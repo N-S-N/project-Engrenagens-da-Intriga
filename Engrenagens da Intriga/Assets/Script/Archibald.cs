@@ -26,7 +26,7 @@ public class Archibald : MonoBehaviour
     [SerializeField] float[] Rangecret;
     [Header("Layer")]
     [SerializeField] LayerMask groundMask;
-    //[SerializeField] LayerMask playerMask;
+    [SerializeField] LayerMask enterection;
     [Header("tag")]
     [SerializeField] string[] taginteracao;
     [Header("objeto")]
@@ -222,11 +222,11 @@ public class Archibald : MonoBehaviour
                 break;
 
             case State.interaction:
-                if (time >= timecreat[personagem] && personagem == 1 || personagem == 3)
+                /*if (time >= timecreat[personagem] && personagem == 1 || personagem == 3)
                 {
                     return State.Iddle;
-                }
-                if (personagem == 0 && resoveu)
+                }*/
+                if (/*personagem == 0 &&*/ resoveu)
                 {
                     return State.Iddle;
                 }
@@ -327,6 +327,7 @@ public class Archibald : MonoBehaviour
     {
         if (playerInput.actions["interaction"].triggered)
         {
+            Debug.Log("apertou o butom");
             return true;
         }
         else
@@ -386,12 +387,12 @@ public class Archibald : MonoBehaviour
         }
     }
 
-
     private bool interacaoobj()
     {
-        RaycastHit2D m_HitDetect = Physics2D.CircleCast(transform.position, Rangecret[personagem], Vector2.zero);
+        RaycastHit2D m_HitDetect = Physics2D.CircleCast(transform.position, Rangecret[personagem], Vector2.zero,0, enterection);
         if (m_HitDetect.collider.gameObject.CompareTag(taginteracao[personagem]))
         {
+            m_HitDetect.collider.gameObject.GetComponent<enterectionScript>().PlayerObj = gameObject;
             return true;
         }
         else

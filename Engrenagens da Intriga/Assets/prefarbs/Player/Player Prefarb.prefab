@@ -602,18 +602,21 @@ MonoBehaviour:
   - 0.82
   timedamege: 0.2
   Rangecret:
-  - 3.66
-  - 3.67
-  - 4.68
-  - 4.83
+  - 10
+  - 10
+  - 10
+  - 10
   groundMask:
     serializedVersion: 2
     m_Bits: 1
+  enterection:
+    serializedVersion: 2
+    m_Bits: 512
   taginteracao:
-  - sfds
-  - fdby
-  - awsca
-  - enemy
+  - ArchibaldEnterection
+  - VictoriaEnterection
+  - lllllllllll
+  - LadyEnterection
   attek:
   - {fileID: 4528626659987171691, guid: f8987326f79b28844be22a1507b9bbd4, type: 3}
   - {fileID: 8292194050058213153}
