@@ -82,19 +82,17 @@ MonoBehaviour:
   personagem: 0
   atteckmove: 1
   SppedWalk:
+  - 4
+  - 8
+  - 10
   - 6
-  - 8
-  - 12
-  - 8
   TimeDesh: 0.2
   isMove: 0
   isDesh: 0
   _relodDesh: 1
   PlayerInfo: 0
+  IsLife: 1
   TransformCam: {fileID: 7759752760175186888}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!50 &4938393938552094929
 Rigidbody2D:
   serializedVersion: 4
@@ -263,7 +261,7 @@ GameObject:
   - component: {fileID: 7799816675470280657}
   - component: {fileID: 6081172779142253982}
   - component: {fileID: 5671621533562211892}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: atteck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,8 +277,8 @@ Transform:
   m_GameObject: {fileID: 3610933074262210192}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.637, y: 0, z: 0}
-  m_LocalScale: {x: 0.0955, y: 1, z: 1}
+  m_LocalPosition: {x: 0.986, y: -0.013, z: 0}
+  m_LocalScale: {x: 0.0955, y: 1.7246182, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7759752760175186888}
@@ -366,7 +364,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -396,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ADistancia: 0
   forca: 0
-  damege: 3
+  damege: 4
 --- !u!1 &5271591592165826649
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,10 +596,10 @@ MonoBehaviour:
   - 1.92
   - 2.09
   timeatteck:
-  - 0.21
-  - 0.39
-  - 0.34
-  - 0.52
+  - 0.51
+  - 0.53
+  - 0.48
+  - 0.82
   timedamege: 0.2
   Rangecret:
   - 3.66
@@ -731,7 +729,7 @@ GameObject:
   - component: {fileID: 1912207617972219933}
   - component: {fileID: 7924494802532271866}
   - component: {fileID: 6320587077737249222}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: atteck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,8 +745,8 @@ Transform:
   m_GameObject: {fileID: 8292194050058213153}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.637, y: 0, z: 0}
-  m_LocalScale: {x: 0.0955, y: 1, z: 1}
+  m_LocalPosition: {x: 1.016, y: 0.0064, z: 0}
+  m_LocalScale: {x: 0.11562185, y: 1.6573594, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7759752760175186888}
@@ -834,7 +832,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -864,4 +862,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ADistancia: 0
   forca: 0
-  damege: 5
+  damege: 3

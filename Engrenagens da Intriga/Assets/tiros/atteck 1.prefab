@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ADistancia: 1
   forca: 500
-  damege: 3
+  damege: 2
 --- !u!50 &1390214885151929035
 Rigidbody2D:
   serializedVersion: 4

@@ -30,15 +30,21 @@ public class atteckSprit : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (ADistancia)
+    {   
+        if (collision.gameObject.CompareTag("enemy"))
         {
-            if (collision.gameObject.CompareTag("enemy"))
-            {
-                collision.gameObject.GetComponent<enemyControle>().Life -= damege;
-                //enemyControl.Life -= damege; 
-            }
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<enemyControle>().Life -= damege;
+            //enemyControl.Life -= damege; 
+        }
+        if (ADistancia) Destroy(gameObject);
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            collision.gameObject.GetComponent<enemyControle>().Life -= damege;
+            //enemyControl.Life -= damege; 
         }
     }
 

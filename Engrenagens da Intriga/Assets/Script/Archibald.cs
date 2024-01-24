@@ -367,6 +367,25 @@ public class Archibald : MonoBehaviour
             demegecolider = false;
         }
     }
+    //triger entra
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("enemyProjects"))
+        {
+            demegecolider = true;
+            Life[personagem] -= collision.gameObject.GetComponent<fireConfigEnemy>().demege;
+        }
+    }
+
+    //triger sair
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("enemyProjects"))
+        {
+            demegecolider = false;
+        }
+    }
+
 
     private bool interacaoobj()
     {

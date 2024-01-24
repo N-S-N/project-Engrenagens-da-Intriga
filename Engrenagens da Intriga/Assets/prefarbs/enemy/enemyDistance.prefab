@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 0
   demege: 1
+  dir: {x: 0, y: 0}
 --- !u!114 &7373987774019172414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personagem: 1
   speedWalk: 3
-  _timeAtteck: 0.5
+  _timeAtteck: 0.97
   _rangervision: 10
   _distanceAtteck: 5
   groundMask:
