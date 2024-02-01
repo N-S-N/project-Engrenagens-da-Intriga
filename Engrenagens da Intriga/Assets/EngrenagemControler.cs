@@ -11,7 +11,8 @@ public class EngrenagemControler : MonoBehaviour
     [SerializeField] Slider Slider;
 
     [Header("Resposta")]
-    [SerializeField] int _gabartito;
+    [SerializeField] int _gabartito1;
+    [SerializeField] int _gabartito2;
 
     [Header("OBJ")]
     [SerializeField] GameObject engrenagem;
@@ -43,18 +44,35 @@ public class EngrenagemControler : MonoBehaviour
 
         //sistema de ferificação
         //tava certo e saio
-        if (Slider.value != _gabartito && acertou)
-        {
-            Brem.CauntCorretsInfo--;
-            acertou = false;
-        }
-        //tava errado e acertou
-        if (Slider.value == _gabartito && !acertou)
-        {
-            Brem.CauntCorretsInfo++;
-            acertou = true;
-        }
 
+        if (_gabartito2 == 0)
+        {
+            if (acertou && Slider.value != _gabartito1)
+            {
+                Brem.CauntCorretsInfo--;
+                acertou = false;
+            }
+            //tava errado e acertou
+            if (Slider.value == _gabartito1 && !acertou)
+            {
+                Brem.CauntCorretsInfo++;
+                acertou = true;
+            }
+        }
+        else
+        {
+            if (acertou && Slider.value != _gabartito1 && Slider.value != _gabartito2)
+            {
+                Brem.CauntCorretsInfo--;
+                acertou = false;
+            }
+            //tava errado e acertou
+            if (!acertou && Slider.value == _gabartito1 || Slider.value == _gabartito2)
+            {
+                Brem.CauntCorretsInfo++;
+                acertou = true;
+            }
+        }
     }
     
     float rotencionFuncion()

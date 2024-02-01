@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 
 public class UiEnterection : MonoBehaviour
 {
     Archibald playerScript;
     enterectionScript PaiScriopt;
+    PlayerInput playerInput;
 
     [Header("Canvas Ui")]
     [SerializeField] Canvas canva; //canva onde tem o enigma
@@ -18,6 +20,10 @@ public class UiEnterection : MonoBehaviour
     [Header("Envents Sistem")]
     [SerializeField] MultiplayerEventSystem[] EventSystems;
 
+    [Header("OBJ")]
+    [SerializeField] GameObject SliderFolt;
+    [SerializeField] GameObject ButomFolt;
+
     public GameObject player;
     //start
 
@@ -27,6 +33,7 @@ public class UiEnterection : MonoBehaviour
         playerScript = PaiScriopt.PlayerObj.GetComponent<Archibald>();
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
+        playerInput = player.GetComponent<PlayerInput>();
         for (int i = 0; i < EventSystems.Length; i++)
         {
             EventSystems[i].playerRoot = PaiScriopt.PlayerObj;
@@ -40,6 +47,15 @@ public class UiEnterection : MonoBehaviour
         {
             EnigmaResolucion();
         }
+
+        if (playerInput.actions["Quit"].triggered)
+        {
+            if (SliderFolt.activeSelf == false)
+            {
+                Exit();
+            }
+        }
+
     }
 
     //relução
@@ -47,6 +63,15 @@ public class UiEnterection : MonoBehaviour
     {
         playerScript.resoveu = true;
         Destroy(PaiScriopt.gameObject);
+    }
+
+    //saida
+
+    public void Exit()
+    {
+        playerScript.resoveu = true;
+        gameObject.SetActive(false);
+
     }
 
 }
