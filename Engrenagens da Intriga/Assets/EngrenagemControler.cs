@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
 public class EngrenagemControler : MonoBehaviour
@@ -18,24 +19,34 @@ public class EngrenagemControler : MonoBehaviour
     [SerializeField] GameObject engrenagem;
     [SerializeField] GameObject SliderFolt;
     [SerializeField] GameObject ButomFolt;
+    [SerializeField] GameObject floatIndivialSlider;
 
+    [Header("Envents Sistem")]
+    [SerializeField] InputSystemUIInputModule[] Input;
+
+    [Header("Input Sicrolizado")]
+    [SerializeField] InputActionReference[] inputas;
 
 
     PlayerInput playerInput;
 
     void OnEnable()
     {
-
         playerInput = Brem.player.GetComponentInParent<PlayerInput>();
+
+        playerInput.uiInputModule = Input[0];
+        siconizacao(0);
     }
     void Update()
     {
         //sair
         if (playerInput.actions["Quit"].triggered)
         {
-            ButomFolt.SetActive(true);
             SliderFolt.SetActive(false);
-            gameObject.SetActive(false);
+            floatIndivialSlider.SetActive(false);
+            ButomFolt.SetActive(true);
+            playerInput.uiInputModule = Input[1];
+            siconizacao(1);
         }
 
         //sistema de rotação
@@ -66,13 +77,13 @@ public class EngrenagemControler : MonoBehaviour
         {
             if (acertou && Slider.value != _gabartito1 && Slider.value != _gabartito2)
             {
-                Brem.CauntCorretsInfo--;
+                Brem.CauntCorretsInfo --;
                 acertou = false;
             }
             //tava errado e acertou
             if (!acertou && Slider.value == _gabartito1 || Slider.value == _gabartito2)
             {
-                Brem.CauntCorretsInfo++;
+                Brem.CauntCorretsInfo ++;
                 acertou = true;
             }
         }
@@ -87,4 +98,20 @@ public class EngrenagemControler : MonoBehaviour
         return rotecionAtual;
     }
 
+
+    //atolização de navegação
+    void siconizacao(int a)
+    {
+        Input[a].point = inputas[0];
+        Input[a].leftClick = inputas[1];
+        Input[a].middleClick = inputas[2];
+        Input[a].rightClick = inputas[3];
+        Input[a].scrollWheel = inputas[4];
+        Input[a].move = inputas[5];
+        Input[a].submit = inputas[6];
+        Input[a].cancel = inputas[7];
+        Input[a].trackedDevicePosition = inputas[8];
+        Input[a].trackedDeviceOrientation = inputas[9];
+
+    }
 }

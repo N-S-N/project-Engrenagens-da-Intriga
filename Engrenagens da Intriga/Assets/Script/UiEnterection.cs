@@ -18,27 +18,29 @@ public class UiEnterection : MonoBehaviour
     public int CauntCorretsInfo = 0; //Quantidade de problema resovido
 
     [Header("Envents Sistem")]
-    [SerializeField] MultiplayerEventSystem[] EventSystems;
+    [SerializeField] InputSystemUIInputModule Input;
 
     [Header("OBJ")]
-    [SerializeField] GameObject Proprio;
+    [SerializeField] public GameObject Pai;
     [SerializeField] GameObject SliderFolt;
     [SerializeField] GameObject ButomFolt;
 
-    public GameObject player;
-    //start
 
-    private void OnEnable()
+
+    public GameObject player;
+
+
+    //start
+    private void Start()
     {
-        PaiScriopt = GetComponentInParent<enterectionScript>();
+        PaiScriopt = Pai.GetComponent<enterectionScript>();
         playerScript = PaiScriopt.PlayerObj.GetComponent<Archibald>();
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
         playerInput = player.GetComponentInParent<PlayerInput>();
-        for (int i = 0; i < EventSystems.Length; i++)
-        {
-            EventSystems[i].playerRoot = PaiScriopt.PlayerObj;
-        }
+
+        playerInput.uiInputModule = Input;
+
     }
 
     //atolizaçõas
@@ -46,7 +48,7 @@ public class UiEnterection : MonoBehaviour
     {
         if (_Number == CauntCorretsInfo)
         {
-            EnigmaResolucion();
+            Invoke("EnigmaResolucion",1f);
         }
 
         if (playerInput.actions["Quit"].triggered)
@@ -61,8 +63,11 @@ public class UiEnterection : MonoBehaviour
     //relução
     public void EnigmaResolucion()
     {
+        Debug.Log("resolveu");
+        Debug.Log(CauntCorretsInfo);
         playerScript.resoveu = true;
-        Destroy(PaiScriopt.gameObject);
+        Destroy(Pai);
+        Destroy(gameObject);
     }
 
     //saida
@@ -71,8 +76,7 @@ public class UiEnterection : MonoBehaviour
     {
         PaiScriopt.PlayerObj = null;
         playerScript.resoveu = true;
-        Proprio.SetActive(false);
-
+        Destroy(gameObject);
     }
 
 }

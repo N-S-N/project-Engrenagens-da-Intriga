@@ -453,6 +453,21 @@ MonoBehaviour:
   engrenagem: {fileID: 124423029944460500}
   SliderFolt: {fileID: 4063367547539236412}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 1393334578326582515}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &105375444045265474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1041,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 543173808228506745}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &3599413933481627694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,6 +1332,21 @@ MonoBehaviour:
   engrenagem: {fileID: 3235114401811195579}
   SliderFolt: {fileID: 2461729774944171063}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 3599413933481627694}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &573654118250148302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1607,21 @@ MonoBehaviour:
   engrenagem: {fileID: 195132763990755144}
   SliderFolt: {fileID: 2936390590222982115}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 1656858361666284493}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &638572353059716295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,11 +2137,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Brem: {fileID: 7314232718062345513}
   Slider: {fileID: 3308611630586000704}
-  _gabartito1: 4
-  _gabartito2: 8
+  _gabartito1: 3
+  _gabartito2: 7
   engrenagem: {fileID: 8157291602718454799}
   SliderFolt: {fileID: 6561455867385591138}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 1388587573200789308}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &997200798774676084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +2342,21 @@ MonoBehaviour:
   engrenagem: {fileID: 2406330208127901602}
   SliderFolt: {fileID: 2335359428478801063}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 66638385662596182}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1038061041332554962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,6 +2542,21 @@ MonoBehaviour:
   engrenagem: {fileID: 6566086357314925142}
   SliderFolt: {fileID: 97527460724209523}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 8775771779918804902}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1189238752673851211
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,6 +3230,21 @@ MonoBehaviour:
   engrenagem: {fileID: 8049446642765061417}
   SliderFolt: {fileID: 7851020375994748523}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 5592160741359183692}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1434033468463038208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,6 +3661,21 @@ MonoBehaviour:
   engrenagem: {fileID: 242598267044485574}
   SliderFolt: {fileID: 3286956472052391307}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 530905781071040429}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1607648946917023800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,7 +3728,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 7350919144655377886}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &2191083098023309078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3749,6 +3869,21 @@ MonoBehaviour:
   engrenagem: {fileID: 7608229983468452818}
   SliderFolt: {fileID: 9150872802109653462}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 869642119117004187}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1629416286150123583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,6 +4144,21 @@ MonoBehaviour:
   engrenagem: {fileID: 5660124568891571337}
   SliderFolt: {fileID: 4196138059328206916}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 4575721533223395694}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &1784339124339865998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4962,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1417693893629795101}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &5592160741359183692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5765,7 +5915,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 983700940845693624}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &1388587573200789308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6867,7 +7017,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6519204620624799211}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &1369770694447289289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6990,7 +7140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.05
+  m_fontSize: 59.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7825,7 +7975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6225341194776230752}
   - component: {fileID: 4088468318934352365}
-  - component: {fileID: 3586986785714684185}
+  - component: {fileID: 7787590718492804123}
   m_Layer: 5
   m_Name: events sistem
   m_TagString: Untagged
@@ -7867,8 +8017,8 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 5270800728276078518}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
---- !u!114 &3586986785714684185
+  m_PlayerRoot: {fileID: 8355395570988662000}
+--- !u!114 &7787590718492804123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7884,17 +8034,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_MoveAction: {fileID: 7028159089778159143, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -8137,7 +8287,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 3917481926099821851}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &9178905265682136364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8389,6 +8539,21 @@ MonoBehaviour:
   engrenagem: {fileID: 4728614536210524737}
   SliderFolt: {fileID: 6328228211273083028}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 7831203554899245991}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &3458678179226465915
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,11 +8965,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Brem: {fileID: 7314232718062345513}
   Slider: {fileID: 7346256608670928480}
-  _gabartito1: 7
+  _gabartito1: 4
   _gabartito2: 0
   engrenagem: {fileID: 2246749085670589309}
   SliderFolt: {fileID: 3654781090471748317}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 2061742921444539618}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &3627543884202716808
 GameObject:
   m_ObjectHideFlags: 0
@@ -9329,7 +9509,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1032264005729720421}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &66638385662596182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9733,6 +9913,21 @@ MonoBehaviour:
   engrenagem: {fileID: 6201301700947230308}
   SliderFolt: {fileID: 2497769320660712205}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 9178905265682136364}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &3925546789175992911
 GameObject:
   m_ObjectHideFlags: 0
@@ -10186,7 +10381,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1782743094467332909}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &4575721533223395694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10958,7 +11153,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &4196138059328206916
 GameObject:
@@ -12073,7 +12268,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 8545031650338793844}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &7693652483899204443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12478,6 +12673,21 @@ MonoBehaviour:
   engrenagem: {fileID: 5795773692290696282}
   SliderFolt: {fileID: 5270299290709527269}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 6804362497681003564}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &4816037154403377993
 GameObject:
   m_ObjectHideFlags: 0
@@ -12757,7 +12967,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6837898240586314702}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &4835876118133061379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12840,7 +13050,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6898683902345050010}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &6444321859573014655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13340,7 +13550,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 7403933552312985084}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &7670724433833084477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13801,7 +14011,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 605423539973354028}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &1656858361666284493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14188,7 +14398,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1079961011890634770}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &8775771779918804902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14645,7 +14855,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 7764053181816017194}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &3474518352514100470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15484,7 +15694,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 3452527888395863987}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &7831203554899245991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15567,7 +15777,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 5967033776241768674}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &2749301545143818278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16005,6 +16215,21 @@ MonoBehaviour:
   engrenagem: {fileID: 5148669440930516544}
   SliderFolt: {fileID: 9025469353527326737}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 2749301545143818278}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6049679514754972193
 GameObject:
   m_ObjectHideFlags: 0
@@ -16531,6 +16756,21 @@ MonoBehaviour:
   engrenagem: {fileID: 817208831381562707}
   SliderFolt: {fileID: 4387856311573358719}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 2936383224657530387}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6205691080556429265
 GameObject:
   m_ObjectHideFlags: 0
@@ -16955,7 +17195,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6204427691183165040}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &2936383224657530387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17246,6 +17486,21 @@ MonoBehaviour:
   engrenagem: {fileID: 4276889233282148932}
   SliderFolt: {fileID: 5487442463338430970}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 1369770694447289289}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6521853820803528937
 GameObject:
   m_ObjectHideFlags: 0
@@ -17658,6 +17913,21 @@ MonoBehaviour:
   engrenagem: {fileID: 7513385583749463626}
   SliderFolt: {fileID: 6543979755188602351}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 7053888078448917090}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6600163655609637573
 GameObject:
   m_ObjectHideFlags: 0
@@ -18105,6 +18375,21 @@ MonoBehaviour:
   engrenagem: {fileID: 6532635337772434845}
   SliderFolt: {fileID: 7779045143782653154}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 762278598561212650}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6833397411579522985
 GameObject:
   m_ObjectHideFlags: 0
@@ -18292,6 +18577,21 @@ MonoBehaviour:
   engrenagem: {fileID: 7525563331265818755}
   SliderFolt: {fileID: 6773829991022014723}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 4835876118133061379}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6898683902345050010
 GameObject:
   m_ObjectHideFlags: 0
@@ -18402,6 +18702,21 @@ MonoBehaviour:
   engrenagem: {fileID: 4891663046459732208}
   SliderFolt: {fileID: 2280419874872785193}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 6444321859573014655}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &6947788170971870211
 GameObject:
   m_ObjectHideFlags: 0
@@ -18790,7 +19105,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1623781213787356767}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &869642119117004187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19116,11 +19431,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Brem: {fileID: 7314232718062345513}
   Slider: {fileID: 4671873537516575323}
-  _gabartito1: 5
+  _gabartito1: 8
   _gabartito2: 0
   engrenagem: {fileID: 2823014568949213949}
   SliderFolt: {fileID: 6295403044370401839}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 2191083098023309078}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &7383964051586627104
 GameObject:
   m_ObjectHideFlags: 0
@@ -19173,7 +19503,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6787287843091201565}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &762278598561212650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19389,6 +19719,21 @@ MonoBehaviour:
   engrenagem: {fileID: 7988155900475991717}
   SliderFolt: {fileID: 1382305648721555931}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 7670724433833084477}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &7415093570341940037
 GameObject:
   m_ObjectHideFlags: 0
@@ -20003,7 +20348,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 1573330905043007979}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &530905781071040429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20477,11 +20822,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Brem: {fileID: 7314232718062345513}
   Slider: {fileID: 1130054695885142492}
-  _gabartito1: 3
-  _gabartito2: 7
+  _gabartito1: 1
+  _gabartito2: 5
   engrenagem: {fileID: 4198185630854440847}
   SliderFolt: {fileID: 2876240575749246982}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 3474518352514100470}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &7771219847663706957
 GameObject:
   m_ObjectHideFlags: 0
@@ -20869,7 +21229,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 3578733795550601039}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &2061742921444539618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21140,7 +21500,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 6586786969706410854}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &7053888078448917090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22515,7 +22875,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 100711359212078756}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &1393334578326582515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22597,7 +22957,7 @@ Canvas:
   m_GameObject: {fileID: 8355395570988662000}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -22609,7 +22969,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &8808237343259288373
 MonoBehaviour:
@@ -22666,33 +23026,8 @@ MonoBehaviour:
   canva: {fileID: 8519790386658284348}
   _Number: 5
   CauntCorretsInfo: 0
-  EventSystems:
-  - {fileID: 4088468318934352365}
-  - {fileID: 5022128157697458845}
-  - {fileID: 417698845604177058}
-  - {fileID: 4083375089870626215}
-  - {fileID: 5477378190456064611}
-  - {fileID: 3814374721813185954}
-  - {fileID: 8030582146647649152}
-  - {fileID: 2038561737157769083}
-  - {fileID: 3563187498322806850}
-  - {fileID: 532472003099941387}
-  - {fileID: 3702036179941782260}
-  - {fileID: 863160307009143588}
-  - {fileID: 9111782560167117130}
-  - {fileID: 6187472679076338347}
-  - {fileID: 1287213029465520712}
-  - {fileID: 6184472202640663864}
-  - {fileID: 6503848897960413479}
-  - {fileID: 3910514796080405679}
-  - {fileID: 1852850185778246221}
-  - {fileID: 9134319092601226833}
-  - {fileID: 7480172697074850566}
-  - {fileID: 4836309751045256842}
-  - {fileID: 8814596481972199854}
-  - {fileID: 7836021311297246776}
-  - {fileID: 6389530283946147086}
-  - {fileID: 7564692344075253666}
+  Input: {fileID: 7787590718492804123}
+  Pai: {fileID: 0}
   SliderFolt: {fileID: 3704576483668509830}
   ButomFolt: {fileID: 4043664717357031470}
   player: {fileID: 0}
@@ -23334,6 +23669,21 @@ MonoBehaviour:
   engrenagem: {fileID: 5112211569265702533}
   SliderFolt: {fileID: 6276852617090331622}
   ButomFolt: {fileID: 4043664717357031470}
+  floatIndivialSlider: {fileID: 3704576483668509830}
+  Input:
+  - {fileID: 7693652483899204443}
+  - {fileID: 7787590718492804123}
+  inputas:
+  - {fileID: -1654692200621890270, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 3001919216989983466, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -2185481485913320682, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -4090225696740746782, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6240969308177333660, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: -8784545083839296357, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 392368643174621059, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7727032971491509709, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 6564999863303420839, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
+  - {fileID: 7970375526676320489, guid: b02f68ce363432d4aac3ee8462a571e0, type: 3}
 --- !u!1 &8607963527102402637
 GameObject:
   m_ObjectHideFlags: 0
@@ -24099,7 +24449,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 4778738613435280638}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 0}
+  m_PlayerRoot: {fileID: 8355395570988662000}
 --- !u!114 &6804362497681003564
 MonoBehaviour:
   m_ObjectHideFlags: 0
