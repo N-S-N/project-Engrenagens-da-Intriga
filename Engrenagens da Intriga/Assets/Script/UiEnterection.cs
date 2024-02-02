@@ -48,7 +48,7 @@ public class UiEnterection : MonoBehaviour
     {
         if (_Number == CauntCorretsInfo)
         {
-            Invoke("EnigmaResolucion",1f);
+            Invoke("EnigmaResolucion",1.3f);
         }
 
         if (playerInput.actions["Quit"].triggered)

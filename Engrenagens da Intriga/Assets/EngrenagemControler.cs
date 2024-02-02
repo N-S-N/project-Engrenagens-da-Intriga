@@ -13,7 +13,7 @@ public class EngrenagemControler : MonoBehaviour
 
     [Header("Resposta")]
     [SerializeField] int _gabartito1;
-    [SerializeField] int _gabartito2;
+    [SerializeField] int _fimDaSessao;
 
     [Header("OBJ")]
     [SerializeField] GameObject engrenagem;
@@ -50,8 +50,8 @@ public class EngrenagemControler : MonoBehaviour
         }
 
         //sistema de rotação
-        if (Slider.value == 9) Slider.value = 1;
-        if (Slider.value == 0) Slider.value = 8;
+        if (Slider.value == _fimDaSessao) Slider.value = 1;
+        if (Slider.value == 0) Slider.value = _fimDaSessao-1;
 
         //sistema de rotação
         engrenagem.transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotencionFuncion()));
@@ -59,33 +59,17 @@ public class EngrenagemControler : MonoBehaviour
         //sistema de ferificação
         //tava certo e saio
 
-        if (_gabartito2 == 0)
+
+        if (acertou && Slider.value != _gabartito1)
         {
-            if (acertou && Slider.value != _gabartito1)
-            {
-                Brem.CauntCorretsInfo--;
-                acertou = false;
-            }
-            //tava errado e acertou
-            if (Slider.value == _gabartito1 && !acertou)
-            {
-                Brem.CauntCorretsInfo++;
-                acertou = true;
-            }
+            Brem.CauntCorretsInfo--;
+            acertou = false;
         }
-        else
+        //tava errado e acertou
+        if (Slider.value == _gabartito1 && !acertou)
         {
-            if (acertou && Slider.value != _gabartito1 && Slider.value != _gabartito2)
-            {
-                Brem.CauntCorretsInfo --;
-                acertou = false;
-            }
-            //tava errado e acertou
-            if (!acertou && Slider.value == _gabartito1 || Slider.value == _gabartito2)
-            {
-                Brem.CauntCorretsInfo ++;
-                acertou = true;
-            }
+            Brem.CauntCorretsInfo++;
+            acertou = true;
         }
     }
     
