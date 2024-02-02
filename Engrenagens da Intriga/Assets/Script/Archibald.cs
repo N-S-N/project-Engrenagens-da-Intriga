@@ -327,7 +327,6 @@ public class Archibald : MonoBehaviour
     {
         if (playerInput.actions["interaction"].triggered)
         {
-            Debug.Log("apertou o butom");
             return true;
         }
         else

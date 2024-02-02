@@ -40,7 +40,6 @@ public class movePlayer : MonoBehaviour
         input = GetComponent<PlayerInput>();
         PlayerInfo = inputManager.playerCount -1;
         personagem = PlayerPrefs.GetInt("Player" + inputManager.playerCount)-1;
-        Debug.Log(inputManager.playerCount);
         rb2D = GetComponent<Rigidbody2D>();
     }
 

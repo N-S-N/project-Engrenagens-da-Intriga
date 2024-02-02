@@ -20,11 +20,13 @@ public class EngrenagemControler : MonoBehaviour
     [SerializeField] GameObject ButomFolt;
 
 
+
     PlayerInput playerInput;
 
     void OnEnable()
     {
-        playerInput = Brem.player.GetComponent<PlayerInput>();
+
+        playerInput = Brem.player.GetComponentInParent<PlayerInput>();
     }
     void Update()
     {
@@ -33,6 +35,7 @@ public class EngrenagemControler : MonoBehaviour
         {
             ButomFolt.SetActive(true);
             SliderFolt.SetActive(false);
+            gameObject.SetActive(false);
         }
 
         //sistema de rotação

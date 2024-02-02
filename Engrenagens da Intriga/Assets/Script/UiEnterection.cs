@@ -21,6 +21,7 @@ public class UiEnterection : MonoBehaviour
     [SerializeField] MultiplayerEventSystem[] EventSystems;
 
     [Header("OBJ")]
+    [SerializeField] GameObject Proprio;
     [SerializeField] GameObject SliderFolt;
     [SerializeField] GameObject ButomFolt;
 
@@ -33,7 +34,7 @@ public class UiEnterection : MonoBehaviour
         playerScript = PaiScriopt.PlayerObj.GetComponent<Archibald>();
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
-        playerInput = player.GetComponent<PlayerInput>();
+        playerInput = player.GetComponentInParent<PlayerInput>();
         for (int i = 0; i < EventSystems.Length; i++)
         {
             EventSystems[i].playerRoot = PaiScriopt.PlayerObj;
@@ -41,7 +42,7 @@ public class UiEnterection : MonoBehaviour
     }
 
     //atolizaçõas
-    private void FixedUpdate()
+    private void Update()
     {
         if (_Number == CauntCorretsInfo)
         {
@@ -55,7 +56,6 @@ public class UiEnterection : MonoBehaviour
                 Exit();
             }
         }
-
     }
 
     //relução
@@ -69,8 +69,9 @@ public class UiEnterection : MonoBehaviour
 
     public void Exit()
     {
+        PaiScriopt.PlayerObj = null;
         playerScript.resoveu = true;
-        gameObject.SetActive(false);
+        Proprio.SetActive(false);
 
     }
 
