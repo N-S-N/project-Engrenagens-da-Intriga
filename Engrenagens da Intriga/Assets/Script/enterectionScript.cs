@@ -9,7 +9,9 @@ public class enterectionScript : MonoBehaviour
     [SerializeField] GameObject eventSystem;
     [SerializeField]public GameObject PlayerObj; //vai receber o player
     [SerializeField] GameObject UiObjEnterection; //obj Da Ui
+
     UiEnterection UiEnterection;
+    LadyUiManeger LadyUiManeger;
 
     bool espanou = false;
 
@@ -18,8 +20,19 @@ public class enterectionScript : MonoBehaviour
         if (PlayerObj && !espanou)
         {
             GameObject filho = Instantiate(UiObjEnterection,transform.position,transform.rotation, PlayerObj.transform);
-            UiEnterection = filho.GetComponent<UiEnterection>();
-            UiEnterection.Pai = gameObject;
+            
+            if (tipo == 0) {
+                UiEnterection = filho.GetComponent<UiEnterection>();
+                UiEnterection.Pai = gameObject;
+            }else if (tipo == 1)
+            {
+
+            }
+            else
+            {
+                LadyUiManeger = filho.GetComponent<LadyUiManeger>();
+                LadyUiManeger.Pai = gameObject;
+            }
             eventSystem.SetActive(false);
             espanou = true;
             Invoke("recarga",1f);

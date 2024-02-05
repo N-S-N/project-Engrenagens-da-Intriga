@@ -25,8 +25,6 @@ public class UiEnterection : MonoBehaviour
     [SerializeField] GameObject SliderFolt;
     [SerializeField] GameObject ButomFolt;
 
-
-
     public GameObject player;
 
 
