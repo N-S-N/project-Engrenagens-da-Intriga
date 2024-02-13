@@ -5,7 +5,9 @@ using UnityEngine.InputSystem.UI;
 
 public class LadyUiManeger : MonoBehaviour
 {
-    
+    [Header("UI Enemy Dada Base")]
+    [SerializeField] bool _isDataBase;
+
     Archibald playerScript;
     enterectionScript PaiScriopt;
     PlayerInput playerInput;
@@ -50,15 +52,24 @@ public class LadyUiManeger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Decenas =  CauntCorretsInfo / 10 ;
-        
-        text.text = CauntCorretsInfo.ToString();
+        if (!_isDataBase)
+        {
+            Decenas = CauntCorretsInfo / 10;
 
-        if (playerInput.actions["Quit"].triggered)
-        {      
-            Exit();       
+            text.text = CauntCorretsInfo.ToString();
+
+            if (playerInput.actions["Quit"].triggered)
+            {
+                Exit();
+            }
         }
-        
+        else
+        {
+            if (playerInput.actions["Quit"].triggered)
+            {
+                EnigmaResolucion();
+            }
+        }
     }
     
     //verificacao

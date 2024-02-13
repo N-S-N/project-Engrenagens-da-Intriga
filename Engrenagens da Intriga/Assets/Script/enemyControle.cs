@@ -20,6 +20,7 @@ public class enemyControle : MonoBehaviour
     [Header("Layer")]
     [SerializeField] LayerMask groundMask;
     [SerializeField] LayerMask playerMask;
+    [SerializeField] LayerMask enterection;
     [Header("objeto")]
     [SerializeField] GameObject attek;
     [Header("audio")]
@@ -71,11 +72,19 @@ public class enemyControle : MonoBehaviour
 
     void Update()
     {
+        if (Life <= 0)
+        {
+            //Destroy(gameObject); 
+            gameObject.layer = 9;
+            gameObject.tag = "LadyEnterection";
+            rb2D.velocity = Vector2.zero;
+            return;
+        }
         float delta = Time.deltaTime;
         homdleenemyFSM(delta);
         //InimeAnimator.SetInteger("State", (int)enemyState);
-        directionVio();
-        if (Life <= 0) Destroy(gameObject); 
+        directionVio();   
+
     }
 
     #endregion

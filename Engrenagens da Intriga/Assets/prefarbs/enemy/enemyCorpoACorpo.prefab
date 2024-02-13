@@ -178,6 +178,8 @@ GameObject:
   - component: {fileID: 6368927090724404963}
   - component: {fileID: -1196025205474370909}
   - component: {fileID: 1265377392712852679}
+  - component: {fileID: 9133094068198270635}
+  - component: {fileID: 6536872546187518183}
   m_Layer: 6
   m_Name: enemyCorpoACorpo
   m_TagString: enemy
@@ -291,6 +293,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+  enterection:
+    serializedVersion: 2
+    m_Bits: 512
   attek: {fileID: 2343245565567854022}
   audios: []
   Maxlife: 10
@@ -368,3 +373,65 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9133094068198270635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3734104052040208405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b851222fbad96c4bb766d9e8b53be3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nome:
+  - Martin F. Goodyear
+  - Lawrence B. Baker
+  - Herbert E. Donaldson
+  - Louise J. Gabriel
+  - Arthur S. Collins
+  - 'Victoria T. Molina '
+  - 'John E. Williams '
+  - Janice W. Lantz
+  - 'Roman M. Slye '
+  - 'Victoria S. Shinkle '
+  - Sue M. Schall
+  - 'Elizabeth J. Alvarez '
+  - Maritza C. Fortin
+  - 'Temeka R. Hurley '
+  - Ines A. Griffin
+  - Mildred R. Wallace
+  - 'James A. Jefferson '
+  - Richard A. Martin
+  - Lisa R. Bennett
+  - Janice M. Chadwick
+  - Bianca Alves Oliveira
+  - "F\xE1bio Dias Cardoso"
+  - "J\xFAlia Almeida Oliveira"
+  - Kauan Ferreira Sousa
+  _idade: 100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e000000
+  _senha: bdfd080039812d005cd60b00aff09600
+  _cargoAleatorio: 1
+  cargo: 0
+  setor: 0
+  Nome: 
+  ID: 0
+  Idade: 0
+  Senha: 0
+--- !u!114 &6536872546187518183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3734104052040208405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fc6f9d48c407b4ab1c942d509a5af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipo: 2
+  eventSystem: {fileID: 0}
+  PlayerObj: {fileID: 0}
+  UiObjEnterection: {fileID: 5598158609943087325, guid: b4c538e8a3ef0c448929cbc9826c3392, type: 3}

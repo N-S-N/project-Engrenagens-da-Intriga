@@ -1241,8 +1241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c457d84d627a99f43acf54f72f391198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDataBase: 0
   canva: {fileID: 4837721906241935368}
-  _Number: 9584
+  _Number: 589245
   Decenas: 0
   CauntCorretsInfo: 0
   Input: {fileID: 721647829386842450}
