@@ -12,6 +12,7 @@ public class enterectionScript : MonoBehaviour
 
     UiEnterection UiEnterection;
     LadyUiManeger LadyUiManeger;
+    VictoriaUiManeger victoriaUiManeger;
 
     bool espanou = false;
 
@@ -24,9 +25,11 @@ public class enterectionScript : MonoBehaviour
             if (tipo == 0) {
                 UiEnterection = filho.GetComponent<UiEnterection>();
                 UiEnterection.Pai = gameObject;
-            }else if (tipo == 1)
+            }
+            else if (tipo == 1)
             {
-
+                victoriaUiManeger = filho.GetComponent<VictoriaUiManeger>();
+                victoriaUiManeger.Pai = gameObject;
             }
             else
             {

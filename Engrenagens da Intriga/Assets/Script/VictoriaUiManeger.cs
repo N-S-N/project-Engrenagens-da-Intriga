@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class VictoriaUiManeger : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class VictoriaUiManeger : MonoBehaviour
     [Header("Input Sicrolizado")]
     [SerializeField] InputActionReference[] inputas;
 
+    [Header("imagem")]
+    [SerializeField] Image cano;
+
     void Start()
     {
         PaiScriopt = Pai.GetComponent<enterectionScript>();
@@ -33,6 +37,8 @@ public class VictoriaUiManeger : MonoBehaviour
 
         playerInput.uiInputModule = Input;
         siconizacao();
+
+        cano.color = Color.gray;
     }
 
     void Update()
@@ -47,6 +53,11 @@ public class VictoriaUiManeger : MonoBehaviour
     //resolucao
     public void EnigmaResolucion()
     {
+        Invoke("awitengresolucion",1F);
+    }
+
+    void awitengresolucion()
+    {
         playerScript.resoveu = true;
         Destroy(Pai);
         Destroy(gameObject);
@@ -55,11 +66,16 @@ public class VictoriaUiManeger : MonoBehaviour
     //saida
     public void Exit()
     {
+        Invoke("awitengExit", 1F);
+    }
+    void awitengExit()
+    {
         PaiScriopt.PlayerObj = null;
         playerScript.resoveu = true;
         Destroy(gameObject);
     }
 
+    //input
     void siconizacao()
     {
         Input.point = inputas[0];
