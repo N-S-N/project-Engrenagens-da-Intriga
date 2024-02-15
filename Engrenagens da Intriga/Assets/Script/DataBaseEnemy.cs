@@ -69,8 +69,7 @@ public class DataBaseEnemy : MonoBehaviour
             }
         }
         #endregion
-
-        Debug.Log(cargo.ToString());
+        //Debug.Log(cargo.ToString());
 
         #region aleotortiação nome
         int ram1 = Random.Range(0, _nome.Length);

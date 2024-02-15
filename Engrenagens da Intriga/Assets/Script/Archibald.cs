@@ -60,7 +60,7 @@ public class Archibald : MonoBehaviour
     private Quaternion rotacao;
     private bool joy;
     private GameObject atteck;
-
+    private bool _isdead = true;
     Transform playerPosision;
 
     #endregion
@@ -118,6 +118,11 @@ public class Archibald : MonoBehaviour
             moveplayer.gameObject.tag = "wall";
             moveplayer.gameObject.layer = groundMask;
             moveplayer.IsLife = false;
+            if (_isdead)
+            {
+                PlayerPrefs.SetInt("deadPlayer", PlayerPrefs.GetInt("deadPlayer") + 1);
+                _isdead = false;
+            }
             //Destroy(gameObject); 
             return;
         }
@@ -337,7 +342,7 @@ public class Archibald : MonoBehaviour
     bool atteckbotom()
     {
 
-        if (playerInput.actions["atteck"].inProgress || Input.GetMouseButton(0))
+        if (playerInput.actions["atteck"].inProgress /*|| Input.GetMouseButton(0)*/)
         {
             return true;
         }

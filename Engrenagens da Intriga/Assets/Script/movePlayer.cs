@@ -39,6 +39,7 @@ public class movePlayer : MonoBehaviour
         PlayerInfo = inputManager.playerCount -1;
         personagem = PlayerPrefs.GetInt("Player" + inputManager.playerCount)-1;
         rb2D = GetComponent<Rigidbody2D>();
+        PlayerPrefs.SetInt("playerCont", inputManager.playerCount);
     }
 
     // Update is called once per frame
