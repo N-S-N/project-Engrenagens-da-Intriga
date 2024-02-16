@@ -567,7 +567,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -636,7 +636,11 @@ MonoBehaviour:
   - 10
   mainCamera: {fileID: 6797069129774842343}
   resoveu: 0
-  sprites: []
+  sprites:
+  - {fileID: 571310359, guid: c61ab46f4ab1ece4ea09230c2e53e0fb, type: 3}
+  - {fileID: -905371645, guid: c61ab46f4ab1ece4ea09230c2e53e0fb, type: 3}
+  - {fileID: -275486340, guid: c61ab46f4ab1ece4ea09230c2e53e0fb, type: 3}
+  - {fileID: -796523198, guid: c61ab46f4ab1ece4ea09230c2e53e0fb, type: 3}
   foto:
   - {fileID: 21300000, guid: 66083416e16da134b9aaa1a4f8449990, type: 3}
   - {fileID: 21300000, guid: cace310155965b34c83de965ec3bcf2b, type: 3}

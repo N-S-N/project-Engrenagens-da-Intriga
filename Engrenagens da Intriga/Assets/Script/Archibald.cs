@@ -105,7 +105,7 @@ public class Archibald : MonoBehaviour
 
         //parte de imagems
 
-        //imagerender.sprite = sprites[personagem];
+        imagerender.sprite = sprites[personagem];
         Uimaneger.foto[moveplayer.PlayerInfo].sprite = foto[personagem];
         Uimaneger.blackfoto[moveplayer.PlayerInfo].sprite = blackfoto[personagem];
     }
