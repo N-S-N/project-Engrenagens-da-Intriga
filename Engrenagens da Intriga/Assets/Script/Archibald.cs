@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -45,11 +46,13 @@ public class Archibald : MonoBehaviour
     [SerializeField] Sprite[] sprites;
     public Sprite[] foto;
     public Sprite[] blackfoto;
-    
+    [Header("dudios")]
+    [SerializeField] AudioSource[] audiosource;
+
     //privada
     Uimaneger Uimaneger;
     private movePlayer moveplayer;
-    private AudioSource audiosource;
+    //private AudioSource audiosource;
     private Rigidbody2D rb2D;
     private Collider2D coll2D;
     private SpriteRenderer imagerender;
@@ -92,7 +95,7 @@ public class Archibald : MonoBehaviour
     {
         moveplayer = GetComponentInParent<movePlayer>(); 
         playerInput = GetComponentInParent<PlayerInput>();
-        audiosource = GetComponent<AudioSource>();
+        //audiosource = GetComponent<AudioSource>();
         enemyState = State.Iddle;
         rb2D = GetComponent<Rigidbody2D>();
         coll2D = GetComponent<Collider2D>();
@@ -277,6 +280,7 @@ public class Archibald : MonoBehaviour
         {
             case State.atteck:
                 moveplayer.atteckmove = 1;
+                audiosource[1].Stop();
                 if (personagem == 1 || personagem == 2)
                 {
                     //Destroy(atteck);
@@ -285,6 +289,9 @@ public class Archibald : MonoBehaviour
                 break;
             case State.interaction:
                 resoveu = false;
+                break;
+            case State.move:
+                audiosource[1].Stop();
                 break;
             default:
                 break;
@@ -296,8 +303,20 @@ public class Archibald : MonoBehaviour
         switch (State)
         {
             case State.atteck:
+                if(personagem == 0 && personagem == 3)
+                {
+                    audiosource[0].PlayOneShot(audios[2]);
+                }
+                else
+                {
+                    audiosource[0].PlayOneShot(audios[1]);
+                }
+                audiosource[1].Play();
                 atteckfuncion();
                 moveplayer.atteckmove = 2;
+                break;
+            case State.move:
+                audiosource[1].Play();
                 break;
             default:
                 break;
@@ -319,6 +338,7 @@ public class Archibald : MonoBehaviour
         }
     }
     #endregion
+
 
     #region sistemas
     //public void OnMove(InputAction.CallbackContext context)
