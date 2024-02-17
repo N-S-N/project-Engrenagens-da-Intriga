@@ -15,23 +15,18 @@ public class movePlayer : MonoBehaviour
     public int atteckmove = 1;
 
     public float[] SppedWalk;
-    public float TimeDesh;
 
     public bool isMove = false;
-    public bool isDesh = false;
 
     [SerializeField] private float _relodDesh;
 
-    private Vector2 _direction;
+    public Vector2 _direction;
 
-    private bool _reloddesh = true;
-    private bool _isDesh = false;
     public int PlayerInfo;
     public bool IsLife = true;
 
     [SerializeField] Transform TransformCam;
-
-    Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     void Start()
     {
         inputManager = FindFirstObjectByType<PlayerInputManager>();
@@ -45,7 +40,11 @@ public class movePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsLife) return;
+        if (!IsLife)
+        {
+            rb2D.velocity = Vector2.zero;
+            return;
+        }
         TransformCam.position = new Vector3(transform.position.x, transform.position.y, -10);
         rb2D.velocity = (input.actions["Move"].ReadValue<Vector2>() * SppedWalk[personagem]) / atteckmove;
         if (rb2D.velocity != new Vector2(0, 0))
@@ -59,7 +58,8 @@ public class movePlayer : MonoBehaviour
         }
 
         if (personagem != 2) return;
-
+        //bug
+        /*
         if (input.actions["desh"].triggered && _reloddesh)
         {
             isDesh = true;
@@ -74,15 +74,11 @@ public class movePlayer : MonoBehaviour
 
         if (_isDesh && TimeDesh >= 0)
         {
-            rb2D.velocity = (_direction * SppedWalk[personagem-1]) * 2;
+            rb2D.velocity = (_direction * SppedWalk[personagem-1]) * 1.2f;
 
             TimeDesh -= Time.deltaTime;
         }
-    }
-
-    void RecuperouDesh()
-    {
-        _reloddesh = true;
+        */
     }
 
     public void stop()

@@ -86,13 +86,13 @@ MonoBehaviour:
   - 8
   - 10
   - 6
-  TimeDesh: 0.2
   isMove: 0
-  isDesh: 0
   _relodDesh: 1
+  _direction: {x: 0, y: 0}
   PlayerInfo: 0
   IsLife: 1
   TransformCam: {fileID: 7759752760175186888}
+  rb2D: {fileID: 4938393938552094929}
 --- !u!50 &4938393938552094929
 Rigidbody2D:
   serializedVersion: 4
@@ -630,6 +630,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fb6335ddccc7f21478b6b2474054f2e5, type: 3}
   - {fileID: 8300000, guid: 5c1f9222d89a24943869c8763b5afcef, type: 3}
   - {fileID: 8300000, guid: 84602cda1c7dafd439653de012d31ea6, type: 3}
+  - {fileID: 8300000, guid: 919f7a1dac3e9bc4da066b33541718b8, type: 3}
+  - {fileID: 8300000, guid: 261e1bc049268b646a2082f181bb3417, type: 3}
   Maxlife:
   - 10
   - 10
@@ -744,7 +746,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -840,8 +842,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 025ba33db32b0614e90eb6cbda39a9d1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_PlayOnAwake: 0
+  m_Volume: 0.723
   m_Pitch: 1
   Loop: 1
   Mute: 0

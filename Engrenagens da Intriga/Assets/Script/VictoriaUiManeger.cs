@@ -27,6 +27,9 @@ public class VictoriaUiManeger : MonoBehaviour
     [Header("imagem")]
     [SerializeField] Image cano;
 
+    [SerializeField] AudioClip door;
+    AudioSource sorce;
+    
     void Start()
     {
         PaiScriopt = Pai.GetComponent<enterectionScript>();
@@ -34,7 +37,7 @@ public class VictoriaUiManeger : MonoBehaviour
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
         playerInput = player.GetComponentInParent<PlayerInput>();
-
+        sorce = GetComponent<AudioSource>();
         playerInput.uiInputModule = Input;
         siconizacao();
 
@@ -53,6 +56,7 @@ public class VictoriaUiManeger : MonoBehaviour
     //resolucao
     public void EnigmaResolucion()
     {
+        sorce.PlayOneShot(door);
         Invoke("awitengresolucion",1F);
     }
 

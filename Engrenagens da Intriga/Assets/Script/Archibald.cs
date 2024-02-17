@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,7 +19,6 @@ public class Archibald : MonoBehaviour
     [SerializeField] float[] timecreat;
     [SerializeField] float[] timeatteck;
     [SerializeField] float timedamege;
-    //[SerializeField] float timedash;
     [Header("campo de visão")]
     [SerializeField] float[] Rangecret;
     [Header("Layer")]
@@ -33,8 +31,6 @@ public class Archibald : MonoBehaviour
     [SerializeField] Transform posisionatteck;
     [Header("audio")]
     [SerializeField] AudioClip[] audios;
-    //[Header("relod")]
-    //[SerializeField] float reloddesh;
     [Header("STATE")]
     public float[] Maxlife;
     public float[] Life;
@@ -49,10 +45,10 @@ public class Archibald : MonoBehaviour
     [Header("dudios")]
     [SerializeField] AudioSource[] audiosource;
 
+
     //privada
     Uimaneger Uimaneger;
     private movePlayer moveplayer;
-    //private AudioSource audiosource;
     private Rigidbody2D rb2D;
     private Collider2D coll2D;
     private SpriteRenderer imagerender;
@@ -69,7 +65,7 @@ public class Archibald : MonoBehaviour
     #endregion
 
     #region state
-    enum State
+    public enum State
     {
         Iddle,
         move,
@@ -80,7 +76,7 @@ public class Archibald : MonoBehaviour
     }
 
     [Header("estaddo")]
-    [SerializeField] State enemyState;
+    [SerializeField]public State enemyState;
     float stateTIme;
 
     #endregion
@@ -115,12 +111,15 @@ public class Archibald : MonoBehaviour
 
     void Update()
     {
-        if (Life[personagem] <= 0) {
+        if (Life[personagem] <= 0) 
+        {
+            rb2D.velocity = Vector2.zero;
             gameObject.layer = groundMask;
             gameObject.tag = "wall";
             moveplayer.gameObject.tag = "wall";
             moveplayer.gameObject.layer = groundMask;
             moveplayer.IsLife = false;
+            audiosource[1].Stop();
             if (_isdead)
             {
                 PlayerPrefs.SetInt("deadPlayer", PlayerPrefs.GetInt("deadPlayer") + 1);
@@ -195,10 +194,6 @@ public class Archibald : MonoBehaviour
                 {
                     return State.damege;
                 }
-                if (moveplayer.isDesh)
-                {
-                    return State.desh;
-                }
                 break;
 
             case State.move: 
@@ -220,10 +215,6 @@ public class Archibald : MonoBehaviour
                 if (demegecolider)
                 {
                     return State.damege;
-                }
-                if (moveplayer.isDesh)
-                {
-                    return State.desh;
                 }
                 break;
 
@@ -255,13 +246,6 @@ public class Archibald : MonoBehaviour
 
             case State.damege:
                 if (time >= timedamege)
-                {
-                    return State.Iddle;
-                }
-                break;
-
-            case State.desh:
-                if (!moveplayer.isDesh)
                 {
                     return State.Iddle;
                 }
@@ -303,21 +287,36 @@ public class Archibald : MonoBehaviour
         switch (State)
         {
             case State.atteck:
-                if(personagem == 0 && personagem == 3)
+                if(personagem == 0 || personagem == 3)
                 {
+                    audiosource[0].volume = 0.5F;
                     audiosource[0].PlayOneShot(audios[2]);
                 }
                 else
                 {
+                    audiosource[0].volume = 0.7F;
                     audiosource[0].PlayOneShot(audios[1]);
                 }
                 audiosource[1].Play();
                 atteckfuncion();
                 moveplayer.atteckmove = 2;
                 break;
+
             case State.move:
                 audiosource[1].Play();
                 break;
+
+            case State.interaction:
+                audiosource[0].volume = 1F;
+                audiosource[0].PlayOneShot(audios[4]);
+                Invoke("stop",0.3f);
+                break;
+
+            case State.damege:
+                audiosource[0].volume = 1F;
+                audiosource[0].PlayOneShot(audios[5]);
+                break;
+
             default:
                 break;
         }
@@ -341,9 +340,12 @@ public class Archibald : MonoBehaviour
 
 
     #region sistemas
-    //public void OnMove(InputAction.CallbackContext context)
-    //{
-    //}
+    //audio
+    private void stop()
+    {
+        audiosource[0].Stop();
+    }
+
 
     //butao de interagir
     bool interactionbotom()

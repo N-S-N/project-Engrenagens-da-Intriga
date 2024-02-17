@@ -37,6 +37,9 @@ public class LadyUiManeger : MonoBehaviour
 
     [Header("Input Sicrolizado")]
     [SerializeField] InputActionReference[] inputas;
+
+    [SerializeField] AudioClip door;
+    AudioSource sorce;
     void Start()
     {
         PaiScriopt = Pai.GetComponent<enterectionScript>();
@@ -44,7 +47,7 @@ public class LadyUiManeger : MonoBehaviour
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
         playerInput = player.GetComponentInParent<PlayerInput>();
-
+        sorce = GetComponent<AudioSource>();
         playerInput.uiInputModule = Input;
         siconizacao();
     }
@@ -77,6 +80,7 @@ public class LadyUiManeger : MonoBehaviour
     {
         if (_Number == CauntCorretsInfo)
         {
+            sorce.PlayOneShot(door);
             Invoke("EnigmaResolucion", 1.5f);
         }
         else

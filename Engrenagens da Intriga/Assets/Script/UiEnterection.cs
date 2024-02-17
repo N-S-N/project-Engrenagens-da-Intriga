@@ -26,7 +26,8 @@ public class UiEnterection : MonoBehaviour
     [SerializeField] GameObject ButomFolt;
 
     public GameObject player;
-
+    AudioSource sorce;
+    [SerializeField] AudioClip door;
 
     //start
     private void Start()
@@ -36,7 +37,7 @@ public class UiEnterection : MonoBehaviour
         canva.worldCamera = playerScript.mainCamera;
         player = PaiScriopt.PlayerObj;
         playerInput = player.GetComponentInParent<PlayerInput>();
-
+        sorce = GetComponent<AudioSource>();
         playerInput.uiInputModule = Input;
 
     }
@@ -46,6 +47,7 @@ public class UiEnterection : MonoBehaviour
     {
         if (_Number == CauntCorretsInfo)
         {
+            sorce.PlayOneShot(door);
             Invoke("EnigmaResolucion",1.3f);
         }
 

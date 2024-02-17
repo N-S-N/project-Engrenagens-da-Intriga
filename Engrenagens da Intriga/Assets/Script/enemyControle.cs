@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class enemyControle : MonoBehaviour
 {
@@ -29,7 +28,7 @@ public class enemyControle : MonoBehaviour
     public float Maxlife;
     public float Life;
 
-
+    float temeAndando;
     //privada
     private bool atteckva;
     private GameObject playerdetect;
@@ -74,10 +73,15 @@ public class enemyControle : MonoBehaviour
     {
         if (Life <= 0)
         {
+            if (personagem == 0)
+            {
+                attek.SetActive(false);
+            }
             //Destroy(gameObject); 
             gameObject.layer = 9;
             gameObject.tag = "LadyEnterection";
             rb2D.velocity = Vector2.zero;
+
             return;
         }
         float delta = Time.deltaTime;
@@ -173,6 +177,14 @@ public class enemyControle : MonoBehaviour
         {
             case State.attack:
                 Atteck();
+                if (personagem == 1){
+                    audiosource.volume = audiosource.volume/1.5F;
+                    audiosource.PlayOneShot(audios[1]);
+                }
+                else
+                {
+                    audiosource.PlayOneShot(audios[2]);
+                }
                 break;
             default:
                 break;
@@ -185,6 +197,12 @@ public class enemyControle : MonoBehaviour
         {
             case State.persigindo:
                 visionDirection();
+                temeAndando += Time.deltaTime;
+                if (temeAndando > 0.3f)
+                {
+                    audiosource.PlayOneShot(audios[0]);
+                    temeAndando = 0;
+                }
                 break;
             case State.Iddle:
                 Stop();
